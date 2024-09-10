@@ -46,7 +46,7 @@ public class Assignment1 {
         System.out.printf("%n%63s%8s", "\\","/");
         System.out.printf("%n%64s%6s", "\\","/");
         System.out.printf("%n%65s%4s", "\\","/");
-        System.out.printf("%n%68s%s", "\\_","/");
+        System.out.printf("%n%67s%s", "\\_","/");
     }
 
     public static void main(String[] args) { 
