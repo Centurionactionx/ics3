@@ -1,3 +1,6 @@
+---
+lastSync: Fri Sep 13 2024 21:25:07 GMT-0400 (Eastern Daylight Time)
+---
 #review
 * High level languages are closer to English but further away from computer
 * Low level language are harder to work with but are faster
