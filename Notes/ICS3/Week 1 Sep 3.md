@@ -26,7 +26,7 @@ lastSync: Fri Sep 13 2024 21:25:07 GMT-0400 (Eastern Daylight Time)
 - Object - a java class. Has data and methods
 - Instance - a specific object of a class
 
-- Java *boilerplate* includes:x
+- Java *boilerplate* includes:
 	- Class declaration
 	- Main method
 
