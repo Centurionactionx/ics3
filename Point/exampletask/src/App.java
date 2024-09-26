@@ -32,7 +32,6 @@ public class App {
             System.out.println(myObj2);
             System.out.println("September twenty fifth, twenty twenty four");
             break;
-            
         }
     }
 
