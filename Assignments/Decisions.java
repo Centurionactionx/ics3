@@ -40,7 +40,7 @@ public class Decisions {
         }
     }
 
-    public void madlibs(){ //Third option: madlibs sentence
+    public void madlibs(){ //Third option: ma dlibs sentence
         System.out.println("Enter a noun");
         String noun1 = s.nextLine();
         System.out.println("Enter another noun");
