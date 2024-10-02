@@ -1,3 +1,5 @@
+import graphics.*;
+
 public class MyOutput{
 
     int d;
