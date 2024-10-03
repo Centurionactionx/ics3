@@ -76,7 +76,7 @@ public class main {
                 default:
                     System.out.println("Invalid choice");
             }
-            System.err.println(' ');
+            System.out.println(' ');
         } while (choice != 'q' && choice  != 'Q');
        
     }
