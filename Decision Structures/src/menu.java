@@ -5,5 +5,6 @@ public class menu {
         System.out.println("l - Length");
         System.out.println("n - Harmonic number");
         System.out.println("w - Wavelength");
+        System.out.println("q - exit program");
     }
 }
