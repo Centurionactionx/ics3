@@ -6,17 +6,15 @@
  */
 
 public class main {
-    
-    /*
-     * Things to ask mr g:
-     * 1. do the functions in the other classes need to be private
-     * 2. that one thing in input
-     */
 
     // Initiates all the classes
     menu m;
     input i;
     calculate c;
+
+    double length;
+    int harmonic_num;
+    double wavelen;
 
     main(){ // Constructor for all classes
         m = new menu();
@@ -26,32 +24,23 @@ public class main {
 
     // Calculates the length given the harmonic number and the wavelength
     public void length_calculation() { 
-        System.out.println("Enter the harmonic number:");
-        int harmonic_num = i.getHarmonic();
-        System.out.println("Enter the wavelength:");
         double wavelen = i.getWavelen();
-        double length = c.calculate_length(harmonic_num, wavelen);
-        System.out.printf("The length is %f %n", length);
+        int harmonic_num = i.getHarmonic();
+        length = c.calculate_length(harmonic_num, wavelen);
     }
 
     // Calculates the harmonic number given the length and wavelength
     public void harmonic_calculation() { 
-        System.out.println("Enter the length:");
         double length = i.getLength();
-        System.out.println("Enter the wavelength:");
         double wavelen = i.getWavelen();
-        int harmonic_num = c.calculate_harmonic(length, wavelen);
-        System.out.printf("The harmonic number is %d %n", harmonic_num);
+        harmonic_num = c.calculate_harmonic(length, wavelen);
     }
 
     // Calculates the wavelength given the harmonic number and length
     public void wavelength_calculation() {
-        System.out.println("Enter the harmonic number:");
-        int harmonic_num = i.getHarmonic();
-        System.out.println("Enter the length:");
         double length = i.getLength();
-        double wavelen = c.calculate_wavelength(harmonic_num, length);
-        System.out.printf("The wavelength is %f %n", wavelen);
+        int harmonic_num = i.getHarmonic();
+        wavelen = c.calculate_wavelength(harmonic_num, length);
     }
 
     // Displays the menu and performs the user's choice of action
@@ -64,26 +53,29 @@ public class main {
                 case 'l':
                 case 'L':
                     length_calculation();
+                    System.out.printf("The length is %.2f %n", length);
                     break;
                 case 'n':
                 case 'N':
                     harmonic_calculation();
+                    System.out.printf("The harmonic number is %d %n", harmonic_num);
                     break;
                 case 'w':
                 case 'W':
                     wavelength_calculation();
+                    System.out.printf("The wavelength is %.2f %n", wavelen);
                     break;
-                default:
-                    System.out.println("Invalid choice");
+                case 'q':
+                case 'Q':
+                    System.out.println("Exiting");
+                    break;
             }
-            System.out.println(' ');
+            System.out.println();
         } while (choice != 'q' && choice  != 'Q');
-       
     }
 
     public static void main(String[] args) { // Main method
         main run = new main();
         run.display();
-        
     }
 }

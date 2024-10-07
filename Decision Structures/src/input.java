@@ -14,7 +14,6 @@ public class input {
         do{
             try {
                 choice = s.nextLine().charAt(0);
-                // s.nextLine(); ask mr g
 
                 // Checks if the choice entered is a valid choice from the menu
                 if (!isValidChoice(choice)) {
@@ -28,15 +27,16 @@ public class input {
     }
 
     // A method for checking for a valid choice
-    public boolean isValidChoice(char choice) {
-        return choice == 'l' || choice == 'L' || choice == 'n' || choice == 'N' || choice == 'w' || choice == 'W';
+    private boolean isValidChoice(char choice) {
+        return choice == 'l' || choice == 'L' || choice == 'n' || choice == 'N' || choice == 'w' || choice == 'W' || choice == 'q' || choice == 'Q';
     }
 
-    // Gets the length from the user.
     public double getLength(){
+    // Gets the length from the user.
         double len = 0.0;
         do{
             try {
+                System.out.println("Enter the length:");
                 len = s.nextDouble();
                 s.nextLine();
             } catch (Exception e) {
@@ -51,6 +51,7 @@ public class input {
         int num = 0;
         do {
             try {
+                System.out.println("Enter the harmonic number:");
                 num = s.nextInt();
                 s.nextLine();
             } catch (Exception e) {
@@ -65,6 +66,7 @@ public class input {
         double len = 0.0;
         do {
             try {
+                System.out.println("Enter the wavelength:");
                 len = s.nextDouble();
                 s.nextLine();
             } catch (Exception e) {
