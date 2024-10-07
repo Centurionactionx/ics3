@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 // The class that handles all inputs from the user
 public class input {
-
+    driver d;
     Scanner s;
     input(){
         s = new Scanner (System.in);

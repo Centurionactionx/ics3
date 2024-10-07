@@ -5,7 +5,7 @@
  * Description: A program that calculates the variable of choice in the standing wave equation with 2 fixed ends
  */
 
-public class main {
+public class driver {
 
     // Initiates all the classes
     menu m;
@@ -16,7 +16,7 @@ public class main {
     int harmonic_num;
     double wavelen;
 
-    main(){ // Constructor for all classes
+    driver(){ // Constructor for all classes
         m = new menu();
         i = new input();
         c = new calculate();
@@ -47,8 +47,8 @@ public class main {
     public void display(){ 
         char choice = 'x';
         do {
-            m.display();
-            choice = i.getChoice();
+            m.display(); // Displays menu
+            choice = i.getChoice(); // Get's the user's choice
             switch (choice) {
                 case 'l':
                 case 'L':
@@ -75,7 +75,7 @@ public class main {
     }
 
     public static void main(String[] args) { // Main method
-        main run = new main();
+        driver run = new driver();
         run.display();
     }
 }
