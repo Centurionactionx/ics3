@@ -1,8 +1,14 @@
+/*
+ * Name: Joseph Wang
+ * Date: October 8
+ * Class: ICS3U
+ * Description: This is the class that handles all inputs from the user, menu option inputs and variable values. 
+ */
+
 import java.util.Scanner;
 
 // The class that handles all inputs from the user
 public class input {
-    driver d;
     Scanner s;
     input(){
         s = new Scanner (System.in);
@@ -32,13 +38,14 @@ public class input {
     }
 
     public double getLength(){
-    // Gets the length from the user.
+        // Creates a temporary length string to convert to a double
+        String len_temp = "";
         double len = 0.0;
         do{
             try {
                 System.out.println("Enter the length:");
-                len = s.nextDouble();
-                s.nextLine();
+                len_temp = s.nextLine();
+                len = Double.parseDouble(len_temp); // If the user enters a value that cannot be converted, an error will occur
             } catch (Exception e) {
                 System.out.println("Invalid value");
             }
@@ -48,12 +55,14 @@ public class input {
 
     // Gets the harmonic number from the user. 
     public int getHarmonic(){
+        // Creates a temporary harmonic number string to convert to an int
+        String num_temp = "";
         int num = 0;
         do {
             try {
                 System.out.println("Enter the harmonic number:");
-                num = s.nextInt();
-                s.nextLine();
+                num_temp = s.nextLine();
+                num = Integer.parseInt(num_temp); // If the user enters a value that cannot be converted, an error will occur
             } catch (Exception e) {
                 System.out.println("Invalid value");
             }
@@ -63,16 +72,18 @@ public class input {
 
     // Gets the wavelength from the user
     public double getWavelen(){
-        double len = 0.0;
+        // Creates a temporary wavelength string to convert to a double
+        String wavelen_temp = "";
+        double wavelen = 0.0;
         do {
             try {
                 System.out.println("Enter the wavelength:");
-                len = s.nextDouble();
-                s.nextLine();
+                wavelen_temp = s.nextLine();
+                wavelen = Double.parseDouble(wavelen_temp); // If the user enters a value that cannot be converted, an error will occur
             } catch (Exception e) {
                 System.out.println("Invalid value");
             }
-        } while (len <= 0); // Loops if the wavelength entered is zero or negative
-        return len;
+        } while (wavelen <= 0); // Loops if the wavelength entered is zero or negative
+        return wavelen;
     }
 }

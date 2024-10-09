@@ -1,3 +1,10 @@
+/*
+ * Name: Joseph Wang
+ * Date: October 8
+ * Class: ICS3U
+ * Description: Handles the calculation of the final variable, taking in the 
+ */
+
 public class calculate {
     
     // Calculates the length given the harmonic number and the wavelength

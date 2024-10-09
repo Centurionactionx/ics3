@@ -1,3 +1,10 @@
+/*
+ * Name: Joseph Wang
+ * Date: October 8
+ * Class: ICS3U
+ * Description: The class that displays the menu and options
+ */
+
 public class menu {
     public void display(){
         System.out.println("Welcome to the standing wave equation for 2 fixed ends variable calculator");

@@ -12,6 +12,7 @@ public class driver {
     input i;
     calculate c;
 
+    // Declares all variables
     double length;
     int harmonic_num;
     double wavelen;
