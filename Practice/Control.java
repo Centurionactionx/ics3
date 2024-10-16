@@ -20,7 +20,7 @@ public class Control {
         up = new JButton("UP");
         up.addActionListener( new ActionListener(){
             public void actionPerformed(ActionEvent e){
-                y = -10;
+                upbutton();
             }
         }
         );
@@ -28,7 +28,7 @@ public class Control {
         down = new JButton("DOWN");
         down.addActionListener( new ActionListener(){
             public void actionPerformed(ActionEvent e){
-                y = 10;
+                downbutton();
             }
         }
         );
@@ -36,7 +36,7 @@ public class Control {
         left = new JButton("LEFT");
         left.addActionListener( new ActionListener(){
             public void actionPerformed(ActionEvent e){
-                x = -10;
+                leftbutton();
             }
         }
         );
@@ -44,7 +44,7 @@ public class Control {
         right = new JButton("RIGHT");
         right.addActionListener( new ActionListener(){
             public void actionPerformed(ActionEvent e){
-                x = 10;
+                rightbutton();
             }
         }
         );
@@ -52,8 +52,7 @@ public class Control {
         stop = new JButton("STOP");
         stop.addActionListener( new ActionListener(){
             public void actionPerformed(ActionEvent e){
-                x = 0;
-                y = 0;
+                stopbutton();
             }
         }
         );
@@ -70,13 +69,31 @@ public class Control {
         f.setVisible (true); //make the frame visible
     }
 
+    public void upbutton(){
+        y = 10;
+    }
+    public void downbutton(){
+        y = -10;
+    }
+    public void leftbutton(){
+        x = -10;
+    }
+    public void rightbutton(){
+        x = 10;
+    }
+    public void stopbutton(){
+        y = 0;
+        x = 0;
+    }
+
     public void display(){
-        while(1 == 1){
-            r.translate(x, y);
-        }
+        r.translate(x, y);
     }
     public static void main(String[] args) {
         Control c = new Control();
-        c.display();
+        while(true){
+            c.display();
+        }
+        
     }
 }
