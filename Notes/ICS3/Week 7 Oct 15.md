@@ -15,3 +15,4 @@ To create a GUI:
    10. Finally make the frame visible by `f.setVisible (true);`
 
 Don't forget to make a function that is called buttonClicked() so it runs whenever the button is clicked. You don't have to put anything in main except initialize the object because it's all in the constructor
+

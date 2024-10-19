@@ -2,7 +2,8 @@
     "java.debug.settings.onBuildFailureProceed": true,
     "java.format.settings.url": "prettier-formatter.xml",
     "java.project.sourcePaths": [
-        "lib\\graphics"
+        "lib\\graphics",
+        "graphics"
     ],
     "java.project.referencedLibraries": []
 }

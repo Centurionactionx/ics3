@@ -1,3 +1,10 @@
+/*
+ * Name: Joseph Wang
+ * Date: October 17 2024
+ * Description: A program that lets you move a rectangle in all four directions for the GUI practice activity.
+ */
+
+ 
 import graphics.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -7,12 +14,13 @@ public class Control {
     JFrame f;
     JButton up, down, left, right, stop;
     Rectangle r;
-    int y = 0;
     int x = 0;
+    int y = 0;
 
     Control(){
-        Canvas.setSize(800, 500);
-        Rectangle r = new Rectangle(50,50,100,50);
+
+        Canvas.setSize(600, 600);
+        r = new Rectangle(50,50,100,50);
         r.setColor(Color.RED);
         r.fill();
 
@@ -20,7 +28,8 @@ public class Control {
         up = new JButton("UP");
         up.addActionListener( new ActionListener(){
             public void actionPerformed(ActionEvent e){
-                upbutton();
+                y = -10;
+                x = 0;
             }
         }
         );
@@ -28,7 +37,8 @@ public class Control {
         down = new JButton("DOWN");
         down.addActionListener( new ActionListener(){
             public void actionPerformed(ActionEvent e){
-                downbutton();
+                y = 10;
+                x = 0;
             }
         }
         );
@@ -36,7 +46,8 @@ public class Control {
         left = new JButton("LEFT");
         left.addActionListener( new ActionListener(){
             public void actionPerformed(ActionEvent e){
-                leftbutton();
+                x = -10;
+                y = 0;
             }
         }
         );
@@ -44,7 +55,8 @@ public class Control {
         right = new JButton("RIGHT");
         right.addActionListener( new ActionListener(){
             public void actionPerformed(ActionEvent e){
-                rightbutton();
+                x = 10;
+                y = 0;
             }
         }
         );
@@ -52,7 +64,8 @@ public class Control {
         stop = new JButton("STOP");
         stop.addActionListener( new ActionListener(){
             public void actionPerformed(ActionEvent e){
-                stopbutton();
+                x = 0;
+                y = 0;
             }
         }
         );
@@ -63,37 +76,24 @@ public class Control {
         f.add(right, BorderLayout.EAST);
         f.add(stop, BorderLayout.CENTER);
 
-        f.setBounds (100, 100, 500, 200); //arguments for x, y (location on the desktop) and the width and height of the window
+        f.setBounds (100, 100, 500, 200); 
         f.setResizable(false);
-        f.setDefaultCloseOperation (JFrame.EXIT_ON_CLOSE); //setting so the program ends when the window is closed
-        f.setVisible (true); //make the frame visible
-    }
-
-    public void upbutton(){
-        y = 10;
-    }
-    public void downbutton(){
-        y = -10;
-    }
-    public void leftbutton(){
-        x = -10;
-    }
-    public void rightbutton(){
-        x = 10;
-    }
-    public void stopbutton(){
-        y = 0;
-        x = 0;
+        f.setDefaultCloseOperation (JFrame.EXIT_ON_CLOSE); 
+        f.setVisible (true); 
     }
 
     public void display(){
-        r.translate(x, y);
+        while(true){
+            r.translate(x, y);
+            try{
+                Thread.sleep(35);
+            } catch(Exception e){
+                
+            }
+        }
     }
     public static void main(String[] args) {
         Control c = new Control();
-        while(true){
-            c.display();
-        }
-        
+        c.display();
     }
 }
