@@ -97,8 +97,24 @@ public class Assets {
      }
   
     public void sun(){
-        sun = new Ellipse(500, -75, 150, 150);
+        sun = new Ellipse(-75, -75, 150, 150);
         sun.setColor(Color.YELLOW);
         sun.fill();
-     }
+    }
+
+    
+    public void cloud1(){
+        Ellipse c1 = new Ellipse(100, 100, 100, 60);
+        c1.setColor(Color.WHITE);
+        c1.fill();
+        
+        Ellipse c2 = new Ellipse(150, 100, 100, 60);
+        c2.setColor(Color.WHITE);
+        c2.fill();
+        
+        Ellipse c3 = new Ellipse(125, 75, 100, 60);
+        c3.setColor(Color.WHITE);
+        c3.fill();
+      }
+  
 }
