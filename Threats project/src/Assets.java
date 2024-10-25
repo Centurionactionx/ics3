@@ -5,6 +5,7 @@ import graphics_local.*;
 
 public class Assets {
 
+    Color space = new Color(155, 135, 222);
     Color grey = new Color(171, 171, 171);
     Color blue = new Color(79, 176, 255);
     Color dark_grey = new Color(99, 99, 99);
@@ -19,6 +20,7 @@ public class Assets {
     Ellipse wheel1;
     Ellipse wheel2;
     Ellipse sun;
+    Ellipse earth;
 
     public void runway(){
         Rectangle r = new Rectangle(0, 400, 820, 4);
@@ -102,19 +104,46 @@ public class Assets {
         sun.fill();
     }
 
-    
-    public void cloud1(){
-        Ellipse c1 = new Ellipse(100, 100, 100, 60);
+    public void cloud1(int x, int y){
+        Ellipse c1 = new Ellipse(x, y, 100, 60);
         c1.setColor(Color.WHITE);
         c1.fill();
         
-        Ellipse c2 = new Ellipse(150, 100, 100, 60);
+        Ellipse c2 = new Ellipse(x+50, y, 100, 60);
         c2.setColor(Color.WHITE);
         c2.fill();
         
-        Ellipse c3 = new Ellipse(125, 75, 100, 60);
+        Ellipse c3 = new Ellipse(x+25, y-25, 100, 60);
         c3.setColor(Color.WHITE);
         c3.fill();
       }
   
+    public void earth(){
+        // Body
+        earth = new Ellipse(-100, 400, 1000, 200);
+        earth.setColor(blue);
+        earth.fill();
+
+        // Continents
+        Ellipse America = new Ellipse(150, 420, 50, 70);
+        Ellipse Africa = new Ellipse(500, 450, 70, 90);
+        Ellipse Europe = new Ellipse(520, 410, 90, 50);
+        Ellipse Asia = new Ellipse(570, 430, 120, 80);
+        
+        America.setColor(Color.GREEN);
+        Africa.setColor(Color.GREEN);
+        Europe.setColor(Color.GREEN);
+        Asia.setColor(Color.GREEN);
+        
+        America.fill();
+        Africa.fill();
+        Europe.fill();
+        Asia.fill();
+    }
+
+    public void space(){
+        Rectangle sky = new Rectangle(0,0,900, 600);
+        sky.setColor(space);
+        sky.fill();
+    }
 }

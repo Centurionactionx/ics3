@@ -1,3 +1,9 @@
+
+/*
+ * Name: Joseph Wang and Sean Wu
+ * Date: Oct 25
+ * Descriptiono: a program that displays the first scene of the airplane animation
+ */
 import java.awt.event.*;
 import javax.swing.*;
 
@@ -9,12 +15,7 @@ import java.awt.Polygon;
 
 public class Scene1 {
 
-    Color grey = new Color(171, 171, 171);
-    Color blue = new Color(79, 176, 255);
-    Color dark_grey = new Color(99, 99, 99);
-    Color green = new Color(94, 222, 69);
     Assets a = new Assets();
-    // Assets a1 = new Assets();
 
     Scene1(){
         Canvas.setSize(800, 500);
@@ -31,22 +32,14 @@ public class Scene1 {
         // Tower
         a.cTower();
 
-        // Sun
-        // a.sun();
-
+        // Cloud
+        a.cloud1(100, 100);
+        a.cloud1(300, 100);
+        a.cloud1(600, 100);
     }
 
+  
     public void runthreats(){
-        
-    }
-
-    
-
-    
-
-    public static void main(String[] args) throws Exception {
-        Scene1 s = new Scene1();
-        s.background();
         Takeoff t = new Takeoff();
         Goodmorning g = new Goodmorning();
 
@@ -56,7 +49,14 @@ public class Scene1 {
             g.join();
         } catch (Exception e) {
            // TODO: handle exception
-         }
+        }
         
+    }
+    
+
+    public static void main(String[] args) throws Exception {
+        Scene1 s = new Scene1();
+        s.background();
+        s.runthreats();
     }
 }
