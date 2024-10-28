@@ -1,6 +1,9 @@
 import graphics_local.Color;
 import graphics_local.Ellipse;
 import graphics_local.Rectangle;
+
+import java.util.Random;
+
 import graphics_local.*;
 
 public class Assets {
@@ -10,8 +13,11 @@ public class Assets {
     Color blue = new Color(79, 176, 255);
     Color dark_grey = new Color(99, 99, 99);
     Color green = new Color(94, 222, 69);
-
+    Color night = new Color(14,38,125);
+    Color dark_green = new Color(63, 148, 46);
     Rectangle body;
+    Rectangle sky;
+    Rectangle ground;
     Ellipse nose;
     Ellipse nose2;
     Ellipse rear;
@@ -21,6 +27,11 @@ public class Assets {
     Ellipse wheel2;
     Ellipse sun;
     Ellipse earth;
+    Ellipse c1;
+    Ellipse c2;
+    Ellipse c3;
+
+    Random rand = new Random();
 
     public void runway(){
         Rectangle r = new Rectangle(0, 400, 820, 4);
@@ -38,12 +49,12 @@ public class Assets {
     }
 
     public void sky_ground(){
-        Rectangle sky = new Rectangle(0,0, 820, 400);
+        sky = new Rectangle(0,0, 820, 400);
         sky.setColor(blue);
         sky.fill();
-        Rectangle r = new Rectangle(0, 454, 820, 70);
-        r.setColor(green);
-        r.fill();
+        ground = new Rectangle(0, 454, 820, 70);
+        ground.setColor(green);
+        ground.fill();
     }
 
     public void cTower(){
@@ -65,35 +76,35 @@ public class Assets {
 
     public void drawPlane(int x, double y){
         body = new Rectangle(x, y + 1, 100, 39);
-        body.setColor(Color.BLACK);
+        body.setColor(dark_grey);
         body.fill();
         
         nose = new Ellipse(x + 80, y, 40, 40);
-        nose.setColor(Color.BLACK);
+        nose.setColor(dark_grey);
         nose.fill();
         
         nose2 = new Ellipse(x + 90, y + 15, 40, 25);
-        nose2.setColor(Color.BLACK);
+        nose2.setColor(dark_grey);
         nose2.fill(); 
         
         rear = new Ellipse(x - 37, y, 60, 40);
-        rear.setColor(Color.BLACK);
+        rear.setColor(dark_grey);
         rear.fill();
         
         tail = new Ellipse(x - 30, y - 17, 20, 35);
-        tail.setColor(Color.BLACK);
+        tail.setColor(dark_grey);
         tail.fill();
         
         wing = new Ellipse(x + 28, y - 40, 30, 130);
-        wing.setColor(Color.BLACK);
+        wing.setColor(dark_grey);
         wing.fill();
   
         wheel1 = new Ellipse(x + 5, y + 45, 15, 15);
-        wheel1.setColor(Color.BLACK);
+        wheel1.setColor(dark_grey);
         wheel1.fill();
         
         wheel2 = new Ellipse(x + 85, y + 45, 15, 15);
-        wheel2.setColor(Color.BLACK);
+        wheel2.setColor(dark_grey);
         wheel2.fill();
   
      }
@@ -104,16 +115,16 @@ public class Assets {
         sun.fill();
     }
 
-    public void cloud1(int x, int y){
-        Ellipse c1 = new Ellipse(x, y, 100, 60);
+    public void cloud1(){
+        c1 = new Ellipse(100, 100, 100, 60);
         c1.setColor(Color.WHITE);
         c1.fill();
         
-        Ellipse c2 = new Ellipse(x+50, y, 100, 60);
+        c2 = new Ellipse(150, 100, 100, 60);
         c2.setColor(Color.WHITE);
         c2.fill();
         
-        Ellipse c3 = new Ellipse(x+25, y-25, 100, 60);
+        c3 = new Ellipse(125,75, 100, 60);
         c3.setColor(Color.WHITE);
         c3.fill();
       }
@@ -146,4 +157,17 @@ public class Assets {
         sky.setColor(space);
         sky.fill();
     }
+
+    public void buildings(){
+
+        for (int i = 0; i <= 850; i+=50){
+            int rand_height = rand.nextInt(3);
+            Rectangle b1 = new Rectangle(i, 400-(rand_height+1)*50, 50, (rand_height+1)*50);
+            b1.setColor(Color.BLACK);
+            b1.fill();
+        }
+        
+      }
+
+
 }

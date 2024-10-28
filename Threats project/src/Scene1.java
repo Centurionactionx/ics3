@@ -33,20 +33,21 @@ public class Scene1 {
         a.cTower();
 
         // Cloud
-        a.cloud1(100, 100);
-        a.cloud1(300, 100);
-        a.cloud1(600, 100);
+        
     }
 
   
     public void runthreats(){
         Takeoff t = new Takeoff();
         Goodmorning g = new Goodmorning();
+        Cloudy c = new Cloudy();
 
         t.start();
         g.start();
+        c.start();
         try {
             g.join();
+            c.join();
         } catch (Exception e) {
            // TODO: handle exception
         }
