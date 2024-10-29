@@ -1,3 +1,9 @@
+/*
+ * Name: Joseph Wang and Sean Wu
+ * Date: Oct 25
+ * Description: Handles the plane flying for the second scene
+ */
+
 public class Flying extends Thread{
 
     Assets a = new Assets();

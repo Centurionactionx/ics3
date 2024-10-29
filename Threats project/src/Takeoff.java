@@ -1,4 +1,8 @@
-
+/*
+ * Name: Joseph Wang and Sean Wu
+ * Date: Oct 25
+ * Description: The class that handles the takeoff on scene 1
+ */
 
 public class Takeoff extends Thread {
 

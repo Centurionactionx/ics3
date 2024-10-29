@@ -1,10 +1,11 @@
-import graphics_local.Color;
-import graphics_local.Ellipse;
-import graphics_local.Rectangle;
+/*
+ * Name: Joseph Wang and Sean Wu
+ * Date: Oct 25
+ * Description: The class that contains all assets for the project
+ */
 
 import java.util.Random;
-
-import graphics_local.*;
+import graphics.*;
 
 public class Assets {
 
@@ -18,6 +19,9 @@ public class Assets {
     Rectangle body;
     Rectangle sky;
     Rectangle ground;
+    Rectangle sunline1;
+    Rectangle sunline2;
+    Rectangle sunline3;
     Ellipse nose;
     Ellipse nose2;
     Ellipse rear;
@@ -30,10 +34,14 @@ public class Assets {
     Ellipse c1;
     Ellipse c2;
     Ellipse c3;
+    Ellipse e;
 
     Random rand = new Random();
 
     public void runway(){
+        Rectangle r4 = new Rectangle(0, 404, 820, 46);
+        r4.setColor(Color.WHITE);
+        r4.fill();
         Rectangle r = new Rectangle(0, 400, 820, 4);
         r.setColor(Color.BLACK);
         r.fill();
@@ -111,8 +119,20 @@ public class Assets {
   
     public void sun(){
         sun = new Ellipse(-75, -75, 150, 150);
+        sunline1 = new Rectangle(-100, -100, 40, 5);
+        sunline2 = new Rectangle (75, 75, 5, 40);
+        sunline3 = new Rectangle (35, 75, 5, 40);
+
         sun.setColor(Color.YELLOW);
+        sunline1.setColor(Color.YELLOW);
+        sunline2.setColor(Color.YELLOW);
+        sunline3.setColor(Color.YELLOW);
+
         sun.fill();
+        sunline1.fill();
+        sunline2.fill();
+        sunline3.fill();
+
     }
 
     public void cloud1(){
@@ -169,5 +189,10 @@ public class Assets {
         
       }
 
-
+    public void moon(){
+        e = new Ellipse(100, 100, 50, 50);
+        e.setColor(Color.WHITE);
+        e.fill();
+        
+    }
 }

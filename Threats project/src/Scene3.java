@@ -4,16 +4,7 @@
  * Description: a program that displays the third scene of the airplane animation
  */
 
-import java.awt.event.*;
-import javax.swing.*;
-import java.util.Random;
-
-import graphics_local.*;
-
-import java.awt.BorderLayout;
-import java.awt.Graphics;
-import java.awt.Polygon;
-
+import graphics.*;
 
 public class Scene3 {
     
@@ -23,29 +14,22 @@ public class Scene3 {
         Canvas.setSize(800, 500);
     }
 
-    public void background(){
-        a.runway();
-        a.sky_ground();
-        a.sky.setColor(a.night);
-        a.ground.setColor(a.dark_green);
-
-        a.buildings();
-    }
-
     public void runthreats(){
         Landing l = new Landing();
+        Cheese c = new Cheese();
 
         l.start();
+        c.start();
         try {
-            
         } catch (Exception e) {
             // TODO: handle exception
         }
     }
 
-    public static void main(String[] args) {
-        Scene3 s = new Scene3();
-        s.background();
-        s.runthreats();
-    }
+    // public static void main(String[] args) {
+    //     Scene3 s = new Scene3();
+    //     Bg3 b = new Bg3();
+    //     b.background();
+    //     s.runthreats();
+    // }
 }

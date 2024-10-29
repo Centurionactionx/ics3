@@ -1,53 +1,33 @@
-
 /*
  * Name: Joseph Wang and Sean Wu
  * Date: Oct 25
- * Descriptiono: a program that displays the first scene of the airplane animation
+ * Description: a program that displays the first scene of the airplane animation
  */
-import java.awt.event.*;
-import javax.swing.*;
 
-import graphics_local.*;
+import graphics.*;
 
-import java.awt.BorderLayout;
-import java.awt.Graphics;
-import java.awt.Polygon;
-
-public class Scene1 {
-
-    Assets a = new Assets();
+public class Scene1 {    
 
     Scene1(){
         Canvas.setSize(800, 500);
-    }
-
-    public void background(){
-
-        // Runway
-        a.runway();
-
-        // Sky and ground
-        a.sky_ground();
-
-        // Tower
-        a.cTower();
-
-        // Cloud
-        
     }
 
   
     public void runthreats(){
         Takeoff t = new Takeoff();
         Goodmorning g = new Goodmorning();
-        Cloudy c = new Cloudy();
+        // Cloudy c = new Cloudy();
+        // Cloudy c2 = new Cloudy(300, 100);
+        // Cloudy c3 = new Cloudy(500, 100);
 
         t.start();
         g.start();
-        c.start();
+        // c.start();
+        // c2.start();
+        // c3.start();
         try {
-            g.join();
-            c.join();
+            // g.join();
+            // c.join();
         } catch (Exception e) {
            // TODO: handle exception
         }
@@ -55,9 +35,10 @@ public class Scene1 {
     }
     
 
-    public static void main(String[] args) throws Exception {
-        Scene1 s = new Scene1();
-        s.background();
-        s.runthreats();
-    }
+    // public static void main(String[] args) throws Exception {
+    //     Scene1 s = new Scene1();
+    //     Bg1 b = new Bg1();
+    //     b.background();
+    //     s.runthreats();
+    // }
 }
