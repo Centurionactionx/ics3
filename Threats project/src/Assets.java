@@ -16,12 +16,11 @@ public class Assets {
     Color green = new Color(94, 222, 69);
     Color night = new Color(14,38,125);
     Color dark_green = new Color(63, 148, 46);
+
+
+
+    // Handles plane
     Rectangle body;
-    Rectangle sky;
-    Rectangle ground;
-    Rectangle sunline1;
-    Rectangle sunline2;
-    Rectangle sunline3;
     Ellipse nose;
     Ellipse nose2;
     Ellipse rear;
@@ -29,6 +28,13 @@ public class Assets {
     Ellipse wing;
     Ellipse wheel1;
     Ellipse wheel2;
+
+    // Other
+    Rectangle sky;
+    Rectangle ground;
+    Rectangle sunline1;
+    Rectangle sunline2;
+    Rectangle sunline3;
     Ellipse sun;
     Ellipse earth;
     Ellipse c1;
@@ -38,10 +44,13 @@ public class Assets {
 
     Random rand = new Random();
 
-    public void runway(){
+    public void runway(){ // Draws the runway for the scene1 and scene3
+        // Fills in runway with white
         Rectangle r4 = new Rectangle(0, 404, 820, 46);
         r4.setColor(Color.WHITE);
         r4.fill();
+
+        // Draw top and bottom black borders for the runway
         Rectangle r = new Rectangle(0, 400, 820, 4);
         r.setColor(Color.BLACK);
         r.fill();
@@ -49,6 +58,7 @@ public class Assets {
         r2.setColor(Color.BLACK);
         r2.fill();
 
+        // Creates the runway lines
         for (int i = 0; i <= 850; i+=50){
             Rectangle r3 = new Rectangle(i, 425, 30, 3);
             r3.setColor(Color.BLACK);
@@ -56,7 +66,7 @@ public class Assets {
         }
     }
 
-    public void sky_ground(){
+    public void sky_ground(){ // Draws the sky and ground
         sky = new Rectangle(0,0, 820, 400);
         sky.setColor(blue);
         sky.fill();
@@ -65,15 +75,20 @@ public class Assets {
         ground.fill();
     }
 
-    public void cTower(){
+    public void cTower(){ //Draws control tower
+        // Main base
         Rectangle r3 = new Rectangle(550, 250, 50, 150);
         r3.setColor(dark_grey);
         r3.fill();
+
+        // Windows on tower
         for (int i = 553; i <= 595; i+=15){
             Rectangle r4 = new Rectangle(i, 285, 12, 9);
             r4.setColor(Color.WHITE);
             r4.fill();
         }
+
+        // Radar
         Rectangle r5 = new Rectangle(574, 225, 2, 25);
         r5.setColor(dark_grey);
         r5.fill();
@@ -82,46 +97,51 @@ public class Assets {
         e.fill();
     }
 
-    public void drawPlane(int x, double y){
+    public void drawPlane(int x, double y){ // Handles drawing the plane
+        // Main body of plane
         body = new Rectangle(x, y + 1, 100, 39);
         body.setColor(dark_grey);
         body.fill();
-        
+
+        // Front of the plane 
         nose = new Ellipse(x + 80, y, 40, 40);
         nose.setColor(dark_grey);
         nose.fill();
-        
+
         nose2 = new Ellipse(x + 90, y + 15, 40, 25);
         nose2.setColor(dark_grey);
-        nose2.fill(); 
-        
+        nose2.fill();
+
+        // Back of plane
         rear = new Ellipse(x - 37, y, 60, 40);
         rear.setColor(dark_grey);
         rear.fill();
-        
+
+        // Tail
         tail = new Ellipse(x - 30, y - 17, 20, 35);
         tail.setColor(dark_grey);
         tail.fill();
-        
+
+        // Wing
         wing = new Ellipse(x + 28, y - 40, 30, 130);
         wing.setColor(dark_grey);
         wing.fill();
-  
+
+        // Wheels
         wheel1 = new Ellipse(x + 5, y + 45, 15, 15);
         wheel1.setColor(dark_grey);
         wheel1.fill();
-        
+
         wheel2 = new Ellipse(x + 85, y + 45, 15, 15);
         wheel2.setColor(dark_grey);
         wheel2.fill();
-  
      }
   
-    public void sun(){
+    public void sun(){ // Draws the sun with sun rays
         sun = new Ellipse(-75, -75, 150, 150);
-        sunline1 = new Rectangle(-100, -100, 40, 5);
-        sunline2 = new Rectangle (75, 75, 5, 40);
-        sunline3 = new Rectangle (35, 75, 5, 40);
+        sunline1 = new Rectangle(50, 5, 50, 5); 
+        sunline2 = new Rectangle(50, 25, 50, 5); 
+        sunline3 = new Rectangle(0, -50, 5, 160);
 
         sun.setColor(Color.YELLOW);
         sunline1.setColor(Color.YELLOW);
@@ -194,5 +214,9 @@ public class Assets {
         e.setColor(Color.WHITE);
         e.fill();
         
+    }
+
+    public static void main(String[] args) {
+        Assets a = new Assets();
     }
 }

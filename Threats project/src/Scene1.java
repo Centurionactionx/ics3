@@ -16,15 +16,15 @@ public class Scene1 {
     public void runthreats(){
         Takeoff t = new Takeoff();
         Goodmorning g = new Goodmorning();
-        // Cloudy c = new Cloudy();
-        // Cloudy c2 = new Cloudy(300, 100);
-        // Cloudy c3 = new Cloudy(500, 100);
+        Cloudy c = new Cloudy();
+        Cloudy c2 = new Cloudy(300, 100);
+        Cloudy c3 = new Cloudy(500, 100);
 
         t.start();
         g.start();
-        // c.start();
-        // c2.start();
-        // c3.start();
+        c.start();
+        c2.start();
+        c3.start();
         try {
             // g.join();
             // c.join();

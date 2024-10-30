@@ -12,7 +12,6 @@ public class Cheese extends Thread{
         for (int i = 0; i < 900; i+=5){
             try {
                 a.e.translate(3, 0);
-
                 Thread.sleep(29);
             } catch (Exception e) {
                 // TODO: handle exception

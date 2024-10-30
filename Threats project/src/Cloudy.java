@@ -1,3 +1,9 @@
+/*
+ * Name: Joseph Wang and Sean Wu
+ * Date: Oct 25
+ * Description: Handles the cloud animations for the first scene. Includes an overload method for cloud location
+ */
+
 import graphics.Color;
 import graphics.Ellipse;
 

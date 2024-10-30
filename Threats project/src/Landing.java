@@ -1,7 +1,7 @@
 /*
  * Name: Joseph Wang and Sean Wu
  * Date: Oct 25
- * Description: Handles landing in the third scene
+ * Description: Handles the plane landing in the third scene
  */
 
 public class Landing extends Thread{
