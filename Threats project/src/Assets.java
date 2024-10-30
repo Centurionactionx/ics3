@@ -41,6 +41,9 @@ public class Assets {
     Ellipse c2;
     Ellipse c3;
     Ellipse e;
+    Ellipse m1;
+    Ellipse m2;
+    Ellipse m3;
 
     Random rand = new Random();
 
@@ -155,7 +158,7 @@ public class Assets {
 
     }
 
-    public void cloud1(){
+    public void cloud1(){ //drawns clouds
         c1 = new Ellipse(100, 100, 100, 60);
         c1.setColor(Color.WHITE);
         c1.fill();
@@ -169,7 +172,7 @@ public class Assets {
         c3.fill();
       }
   
-    public void earth(){
+    public void earth(){ //draws the earth in 2nd scene
         // Body
         earth = new Ellipse(-100, 400, 1000, 200);
         earth.setColor(blue);
@@ -192,13 +195,13 @@ public class Assets {
         Asia.fill();
     }
 
-    public void space(){
+    public void space(){ //sets background color
         Rectangle sky = new Rectangle(0,0,900, 600);
         sky.setColor(space);
         sky.fill();
     }
 
-    public void buildings(){
+    public void buildings(){ //draws buildings
 
         for (int i = 0; i <= 850; i+=50){
             int rand_height = rand.nextInt(3);
@@ -209,11 +212,22 @@ public class Assets {
         
       }
 
-    public void moon(){
-        e = new Ellipse(100, 100, 50, 50);
+    public void moon(){ //draws moon
+        e = new Ellipse(0, 100, 50, 50);
         e.setColor(Color.WHITE);
         e.fill();
+
+        m1 = new Ellipse(10, 110,20, 20);
+        m1.setColor(grey);
+        m1.fill();
         
+        m2 = new Ellipse(35, 115, 10, 10);
+        m2.setColor(grey);
+        m2.fill();
+
+        m3 = new Ellipse(30, 130, 10, 10);
+        m3.setColor(grey);
+        m3.fill();
     }
 
     public static void main(String[] args) {

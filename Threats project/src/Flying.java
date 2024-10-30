@@ -7,7 +7,7 @@
 public class Flying extends Thread{
 
     Assets a = new Assets();
-    public void flying(){
+    public void flying(){ //moves the plane
         a.drawPlane(-100, 300);
         for (int i = 0; i <= 1000; i+=5){
             if(i <= 450){

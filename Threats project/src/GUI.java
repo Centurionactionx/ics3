@@ -1,52 +1,57 @@
+//Sean Wu and Joeseph Wang
+//October 29
+//this file runs the GUI
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-public class A6_gui{
+public class GUI{
 
   JFrame f; //the main window frame
   JButton scene1, scene2, scene3; //the button itself
   
-  A6_gui(){ 
+  GUI(){ 
   scene1 = new JButton ("scene1");
   scene2 = new JButton ("scene2");
   scene3 = new JButton ("scene3");
 
-  scene1.addActionListener ( new ActionListener(){
+  scene1.addActionListener ( new ActionListener(){ //button for scene 1
 
-     public void actionPerformed (ActionEvent e){
+     public void actionPerformed (ActionEvent e){ 
         Scene1 s = new Scene1();
         Bg1 b = new Bg1();
-        b.background();
-        s.runthreats();
+        b.background(); //calls background
+        s.runthreats(); //runs thread
      }
   }
 );
 
-   scene2.addActionListener ( new ActionListener(){
+   scene2.addActionListener ( new ActionListener(){ //buttonf or scene2
 
      public void actionPerformed (ActionEvent e){
          Scene2 s = new Scene2();
          Bg2 b = new Bg2();
-         b.background();
-         s.runthreats();
+         b.background(); //calls background
+         s.runthreats(); //runs thread
      }
   }
 );
    
-   scene3.addActionListener ( new ActionListener(){
+   scene3.addActionListener ( new ActionListener(){ //button for scene3
 
      public void actionPerformed (ActionEvent e){
          Scene3 s = new Scene3();
          Bg3 b = new Bg3();
-         b.background();
-         s.runthreats();
+         b.background(); //calls background
+         s.runthreats(); //runs thread
      }
   }
 );
 
+   //adds buttons to frame
    f = new JFrame ();
-   f.add (scene1, BorderLayout.NORTH);
+   f.add (scene1, BorderLayout.NORTH); 
    f.add (scene2, BorderLayout.CENTER);
    f.add (scene3, BorderLayout.SOUTH);
 
@@ -57,7 +62,7 @@ public class A6_gui{
    }
 
    public static void main (String[] args){
-      A6_gui w = new A6_gui();
+      GUI w = new GUI();
    }
 
 }

@@ -8,7 +8,7 @@ public class Takeoff extends Thread {
 
     Assets a = new Assets();
 
-    public void takeoff(){
+    public void takeoff(){ //performs plane takeoff
         a.drawPlane(100, 375);
         for (int i = 100; i <= 500; i+=5){
             try {

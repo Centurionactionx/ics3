@@ -8,7 +8,7 @@ public class Landing extends Thread{
 
     Assets a = new Assets();
 
-    public void landing(){
+    public void landing(){ //preforms plane landing
         a.drawPlane(100, 100);
         for (int i = 100; i <= 500; i+=5){
             try {

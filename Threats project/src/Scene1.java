@@ -13,32 +13,22 @@ public class Scene1 {
     }
 
   
-    public void runthreats(){
+    public void runthreats(){ //draws scene 1 background
         Takeoff t = new Takeoff();
         Goodmorning g = new Goodmorning();
         Cloudy c = new Cloudy();
         Cloudy c2 = new Cloudy(300, 100);
         Cloudy c3 = new Cloudy(500, 100);
 
+        // Starts the takeoff
         t.start();
+
+        // Starts moving the sun and clouds
         g.start();
         c.start();
         c2.start();
         c3.start();
-        try {
-            // g.join();
-            // c.join();
-        } catch (Exception e) {
-           // TODO: handle exception
-        }
         
     }
-    
 
-    // public static void main(String[] args) throws Exception {
-    //     Scene1 s = new Scene1();
-    //     Bg1 b = new Bg1();
-    //     b.background();
-    //     s.runthreats();
-    // }
 }

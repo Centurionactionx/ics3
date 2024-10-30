@@ -4,10 +4,14 @@
  * Description: The background for the first scene
  */
 
+import graphics.*;
+
 public class Bg1 {
     Assets a = new Assets();
 
     public void background(){
+
+        
         // Runway
         a.runway();
 
@@ -16,5 +20,12 @@ public class Bg1 {
 
         // Tower
         a.cTower();
+        Text greeting = new Text(600,475, "Joseph Wang and Sean Wu");
+        greeting.grow(120, 20); 
+        greeting.draw();
+    }
+
+    public static void main(String[] args) {
+        Bg1 b = new Bg1();
     }
 }

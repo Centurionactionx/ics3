@@ -12,7 +12,7 @@ public class Cloudy extends Thread{
     Ellipse c1;
     Ellipse c2;
     Ellipse c3;
-    Cloudy(){
+    Cloudy(){ //draws clouds
         c1 = new Ellipse(100, 100, 100, 60);
         c1.setColor(Color.WHITE);
         c1.fill();
@@ -26,7 +26,7 @@ public class Cloudy extends Thread{
         c3.fill();
     }
 
-    Cloudy(int x, int y){
+    Cloudy(int x, int y){ //draws clouds
         c1 = new Ellipse(x, y, 100, 60);
         c1.setColor(Color.WHITE);
         c1.fill();
@@ -41,8 +41,8 @@ public class Cloudy extends Thread{
     }
     Assets a = new Assets();
 
-    public void run(){
-        for(int i = 500; i < 850; i+=1){
+    public void run(){ //moves clouds
+        for(int i = 500; i < 950; i+=1){
             try {
                 c1.translate(2, 0);
                 c2.translate(2, 0);

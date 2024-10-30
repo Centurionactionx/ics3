@@ -8,9 +8,9 @@ public class Goodmorning extends Thread {
 
     Assets a = new Assets();
 
-    public void run(){
+    public void run(){ //moves the sun
 		a.sun();
-        for (int i = 500; i < 850; i += 1) {
+        for (int i = 500; i < 1600; i += 1) {
             try {
                 a.sun.translate(1, 0);
                 a.sunline1.translate(1, 0);
@@ -23,4 +23,8 @@ public class Goodmorning extends Thread {
             }
         }
 	}
+
+    public static void main(String[] args) {
+        Goodmorning g = new Goodmorning();
+    }
 }

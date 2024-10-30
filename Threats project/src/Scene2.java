@@ -13,21 +13,10 @@ public class Scene2 {
         Canvas.setSize(800, 500);
     }
 
-    public void runthreats(){
+    public void runthreats(){ //plane flying
         Flying f = new Flying();
 
         f.start();
-        // try {
-        //     g.join();
-        // } catch (Exception e) {
-        //    TODO: handle exception
-        // }
     }
 
-    // public static void main(String[] args) {
-    //     Scene2 s = new Scene2();
-    //     Bg2 b = new Bg2();
-    //     b.background();
-    //     s.runthreats();
-    // }
 }

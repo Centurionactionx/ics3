@@ -7,7 +7,7 @@
 public class Bg3 {
     Assets a = new Assets();
 
-    public void background(){
+    public void background(){ //draws scene3 background
         a.runway();
         a.sky_ground();
         a.sky.setColor(a.night);

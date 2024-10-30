@@ -7,15 +7,21 @@
 public class Cheese extends Thread{
     Assets a = new Assets();
 
-    public void run(){
+    public void run(){ //moves the moon
         a.moon();
-        for (int i = 0; i < 900; i+=5){
+        for (int i = 0; i < 1500; i++){
             try {
                 a.e.translate(3, 0);
+                a.m1.translate(3, 0);
+                a.m2.translate(3, 0);
+                a.m3.translate(3, 0);
                 Thread.sleep(29);
             } catch (Exception e) {
                 // TODO: handle exception
             }
         }
+    }
+    public static void main(String[] args) {
+        Thread t = new Thread();
     }
 }
