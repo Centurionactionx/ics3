@@ -25,7 +25,4 @@ public class Bg1 {
         greeting.draw();
     }
 
-    public static void main(String[] args) {
-        Bg1 b = new Bg1();
-    }
 }

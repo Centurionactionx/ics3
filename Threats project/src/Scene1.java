@@ -8,6 +8,8 @@ import graphics.*;
 
 public class Scene1 {    
 
+    Assets a = new Assets();
+
     Scene1(){
         Canvas.setSize(800, 500);
     }
@@ -17,8 +19,8 @@ public class Scene1 {
         Takeoff t = new Takeoff();
         Goodmorning g = new Goodmorning();
         Cloudy c = new Cloudy();
-        Cloudy c2 = new Cloudy(300, 100);
-        Cloudy c3 = new Cloudy(500, 100);
+        Cloudy c2 = new Cloudy(300, 100, a.dark_grey);
+        Cloudy c3 = new Cloudy(500, 100, Color.WHITE);
 
         // Starts the takeoff
         t.start();

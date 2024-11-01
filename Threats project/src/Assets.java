@@ -17,8 +17,6 @@ public class Assets {
     Color night = new Color(14,38,125);
     Color dark_green = new Color(63, 148, 46);
 
-
-
     // Handles plane
     Rectangle body;
     Ellipse nose;

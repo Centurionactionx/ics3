@@ -26,17 +26,17 @@ public class Cloudy extends Thread{
         c3.fill();
     }
 
-    Cloudy(int x, int y){ //draws clouds
+    Cloudy(int x, int y, Color c){ //draws clouds
         c1 = new Ellipse(x, y, 100, 60);
-        c1.setColor(Color.WHITE);
+        c1.setColor(c);
         c1.fill();
         
         c2 = new Ellipse(x+50, y, 100, 60);
-        c2.setColor(Color.WHITE);
+        c2.setColor(c);
         c2.fill();
         
         c3 = new Ellipse(x+25,y-25, 100, 60);
-        c3.setColor(Color.WHITE);
+        c3.setColor(c);
         c3.fill();
     }
     Assets a = new Assets();
