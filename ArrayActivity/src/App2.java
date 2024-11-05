@@ -1,14 +1,14 @@
 import java.util.Scanner;
 import java.lang.Math;
 
-public class App {
+public class App2 {
 
     Scanner s;
     int[] nums;
     int n;
     long startTime = System.nanoTime();
 
-    App() {
+    App2() {
         s = new Scanner(System.in);
     }
 
@@ -28,13 +28,9 @@ public class App {
             return false;
         }
         if (n == 2) {
-            return true; 
+            return true;
         }
-        if (n % 2 == 0) {
-            return false;
-        }
-        int sqrt = (int) Math.sqrt(n);
-        for (int i = 3; i <= sqrt; i += 2) {
+        for (int i = 2; i <= Math.sqrt(n); i++) {
             if (n % i == 0) {
                 return false;
             }
@@ -46,7 +42,7 @@ public class App {
         System.out.printf("%-10s %s%n", "Number", "isPrime");
         String primeStatus;
         for (int i = 0; i < nums.length; i++) {
-            if(calculatePrime(nums[i])){
+            if (calculatePrime(nums[i])) {
                 primeStatus = "Yes";
             } else {
                 primeStatus = "No";
@@ -60,7 +56,7 @@ public class App {
     }
 
     public static void main(String[] args) {
-        App a = new App();
+        App2 a = new App2();
         a.askData();
         a.display();
     }
