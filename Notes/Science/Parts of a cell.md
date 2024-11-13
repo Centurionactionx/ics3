@@ -1,12 +1,14 @@
--  Nucleus
-- Nuclear envelop
+
+- Nucleus
+- Nuclear envelope
+	- Surrounds nucleus and controls passage inside and out
 - Centrioles
 - Rough ER
 	- Folded interconnected membrane
-	- Site for protein sythesis
+	- Site for protein synthesis
 	- Basically connected to the nucleus
 	- Makes proteins from ribosomes
-	- Sends stuff to the golgi body
+	- Sends stuff to the Golgi body
 - Smooth ER
 	- Folded interconnected membrane like the Rough ER. In circles though
 	- Site for lipid synthesis
@@ -14,10 +16,10 @@
 - Golgi apparatus
 	- Folded interconnected membrane
 	- Modifies proteins and liquids from ER
-	- Packages finished products into vesicules for transport
-	- 
+	- Packages finished products into vacuoles for transport
 - Mitochondria
 	- DO NOT call the powerhouse of the cell
+	- Produces Energy
 	- Surrounded by double membrane
 	- Lots of Folds
 	- Energy production center. Converts energy to food through a process called cellular respiration
@@ -30,4 +32,4 @@
 	- Rigi wall composed mostly of cellulose
 	- Specific to plan cells
 	- Gives shape and structural support to plant cells
-	- 
+
