@@ -46,3 +46,20 @@ Unipotent:
 
 Terminally differentiated:
 - Cannot differentiate at all
+
+Tissues:
+- Muscle Tissue
+	- Cardiac - heart, fatigue resistant, striation
+	- Skeletal - Limbs, not fatigue resistant, striations
+	- Smooth - Organs that contract, fatigue resistant, no striations
+- Nervous Tissue
+	- Typically neurons
+	- Sends electrical signals
+- Connective Tissue
+	- Eg. Bone, cartilage, fat, blood
+	- Cells held together by a liquid or other substances
+- Epithelial Tissue
+	- Anything that has layers or is lining
+	- Classifications
+		- Simple vs Stratified
+		- Squamous vs Cuboidal vs Columnar
