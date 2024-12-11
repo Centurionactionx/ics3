@@ -1,25 +1,24 @@
+package testreview;
 import java.util.Scanner;
 
 public class q2 {
 
     Scanner s;
-
+    int num;
     q2(){
         s = new Scanner(System.in);
     }
-    public void enterint(){
-        double n;
-        try {
-            System.out.println("Enter a number");
-            n = Double.parseDouble(s.nextLine());
-            System.out.println("Cool man");
-        } catch (Exception e) {
-            System.out.println("Invalid input");
+    public void display(){
+        num = s.nextInt();
+        int fact = 1;
+        for(int i = num; i >= 1; i--){
+            fact *= i;
         }
+        System.out.println(fact);
     }
 
     public static void main(String[] args) {
         q2 q = new q2();
-        q.enterint();
+        q.display();
     }
 }

@@ -1,11 +1,22 @@
 package testreview;
+import java.util.Scanner;
 
 public class q1 {
+    Scanner s;
+    q1(){
+        s = new Scanner(System.in);   
+    }
+
+    int a;
+    int b;
+
     public int calculate(){
+        a = s.nextInt();
+        b = s.nextInt();
         int sum = 0;
-        for (int i = 2; i<=200; i+=2){
+        for(int i = a; i <= b; i++){
             sum += i;
-        }
+        } 
         return sum;
     }
 

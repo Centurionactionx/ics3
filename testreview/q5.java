@@ -1,36 +1,52 @@
 package testreview;
+import java.io.*;
 import java.util.Scanner;
 
 public class q5 {
     Scanner s;
+    int[] nums;
 
     q5(){
         s = new Scanner(System.in);
     }
 
-    public void calculate(int a, int b){
-        System.out.println(a + b);
-    }
-
-    public void calculate(int a, int b, int c, double d){
-        System.out.println(a + b + c + d);
-    }
-
-    public void calculate(double d, double e){
-        System.out.println(d + e);
-    }
-
     public void driver(){
-        System.out.println("Enter 3 ints and two doubles");
-        int a = s.nextInt();
-        int b = s.nextInt();
-        int c = s.nextInt();
-        s.nextLine();
-        double d = Double.parseDouble(s.nextLine());
-        double e = Double.parseDouble(s.nextLine());
-        calculate(a, b);
-        calculate(a, b, c, d);
-        calculate(d, e);
+        File f;
+        try {
+            f = new File("ints.txt");
+            nums = new int[filesize(f)];
+            s = new Scanner(f);
+            int index = 0;
+            while(s.hasNextLine()){
+                nums[index] = Integer.parseInt(s.nextLine());
+                index++;
+            }
+            s.close();
+
+            int prod = 1;
+            for (int i = 0; i < nums.length; i++){
+                prod *= nums[i];
+            }
+            System.out.println(prod);
+        } catch (Exception e) {
+            // TODO: handle exception
+        }
+    }
+
+    public int filesize(File f){
+        int count = -1;
+        try {
+            Scanner a = new Scanner (f);
+            count = 0;
+            while(a.hasNextLine()){
+                a.nextLine();
+                count++;
+            }
+            a.close();
+        } catch (Exception e) {
+            // TODO: handle exception
+        }
+        return count;
     }
 
     public static void main(String[] args) {
