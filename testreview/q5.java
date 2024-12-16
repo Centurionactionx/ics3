@@ -12,39 +12,39 @@ public class q5 {
 
     public void driver(){
         File f;
-        try {
-            f = new File("ints.txt");
+        try{
+            f = new File("words.txt");
+            Scanner a = new Scanner(f);
             nums = new int[filesize(f)];
-            s = new Scanner(f);
-            int index = 0;
-            while(s.hasNextLine()){
-                nums[index] = Integer.parseInt(s.nextLine());
-                index++;
-            }
-            s.close();
 
-            int prod = 1;
-            for (int i = 0; i < nums.length; i++){
-                prod *= nums[i];
+            int index = 0;
+            while(a.hasNextLine()){
+                nums[index] = a.nextInt();    
+                index++;            
             }
-            System.out.println(prod);
-        } catch (Exception e) {
-            // TODO: handle exception
+            a.close();
+        }catch(Exception e){
+
         }
+
+        int prod = 1;
+        for (int n:nums){
+            prod *= n;
+        }
+        System.out.println(prod);
     }
 
     public int filesize(File f){
         int count = -1;
-        try {
-            Scanner a = new Scanner (f);
+        try{
             count = 0;
+            Scanner a = new Scanner(f);
             while(a.hasNextLine()){
                 a.nextLine();
                 count++;
             }
             a.close();
-        } catch (Exception e) {
-            // TODO: handle exception
+        } catch(Exception e){
         }
         return count;
     }
