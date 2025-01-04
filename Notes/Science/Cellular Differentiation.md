@@ -1,6 +1,6 @@
 Definition: What makes cells different from each other
 
-Stem cells have no specific function. They can become anything they want. They haven't become specialized yet.
+Stem cells have no specific function. They can become anything they want. They haven't become specialized yet. THEY ARE THE DEFAULT CELL
 
 Ebryogenisis: a term to describe making an embryo
 An ebryo is basically a baby in the womb. Has different definitions
@@ -12,7 +12,7 @@ Haploid: half of each chromosome full set thing
 - Eg. Unfertilized egg
 
 Zygotes immediately develop. It is called `cleavage`. 
-- Each development is called blastomeres. 
+- Each development is called blastomeres. More than 1 zygote = blastomeres. 2 blastomeres -> 4 blastomeres > morula
 - Gets to 8 cells or more, called `morula`. 
 - After `morula` is `blastula` which is has a hollow mass inside. 
 - In humans, `blastula` develops into a `blastocyst`. Blastocyst has cells on one side
@@ -24,13 +24,13 @@ Blastocyst has an inner cell mass
 
 Zona Pellucida is the sack that the embryo is enclosed in. Embryo will hatch from it as long as it attaches to the wall of the uterus.
 
-Gastrulation
+Gastrulation. 3 germ layers:
 - Outer: Ectoderm - Skin
 - Middle: Mesoderm - Blood
 - Inner: Endoderm - GI tract, lungs
 
 Embryonic Stem Cells (ESC):
-- Totipotent: Zygote and Morula
+- Totipotent: Zygote and Morula 
 	- Can still form a baby even if taken out
 
 - Pluripotent: Blastula and Blastocyst

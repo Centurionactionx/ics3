@@ -1,4 +1,16 @@
-- Oncogene
+Benign tumour: cells stay together having no
+
+effect on surrounding tissue other than
+
+physical crowding
+
+▪
+
+Malignant tumour: cells interfere with the
+
+function of surrounding cells
+
+Oncogene
 	- A mutated gene that can turn cells into tumor cells, causing cancer
 	- Prevents apoptosis ([[Cell cycle]])
 	- Default state **OFF**

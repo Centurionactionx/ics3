@@ -1,6 +1,10 @@
 %% Begin Waypoint %%
+- [[Bad stuff]]
 - [[Cancer]]
 - [[Cell cycle]]
-- [[Parts of a cell]]
 - [[Cellular Differentiation]]
+- [[Parts of a cell]]
+- [[Plant Tissue]]
+- [[Respiratory System]]
+
 %% End Waypoint %%

@@ -13,6 +13,8 @@
 - [[Week 10 Nov 4]]
 - [[Week 11 Nov 11 (wow 🤯)]]
 - [[Week 12 Nov 18]]
+- [[Week 13 Nov 25]]
+- [[Week 14 Dec 2]]
 
 %% End Waypoint %%
 
