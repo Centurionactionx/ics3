@@ -1,0 +1,27 @@
+- Value propositions
+	- What value does your product hold
+- Customer Segments
+	- What age group are we targetting?
+- Channel
+	- How are customers getting to your product
+- Customer relationships
+	- Newsletters
+	- Social media
+	- Resources
+- Revenue model
+	- Direct selling model
+	- B2B (Business to business)
+	- Subscription model? One-time purchase?
+- Key resources
+	- Finance
+	- Assets
+	- Intellectual assets
+- Activities
+	- Production, Development
+- Partnerships
+	- Partnering with communities
+	- Suppliers
+	- Joint ventures
+- Cost Structure
+	- Operational $
+	- Economics of scale (More sales, production cost down)

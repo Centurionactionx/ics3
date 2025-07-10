@@ -12,5 +12,3 @@ For detecting keys, we require 3 different methods
 	- Check if `e.getKeyCode` = whatever key you want to detect
 - `keyReleased`
 	-  Pass in `(KeyEvent e)`
-	- 
-  
