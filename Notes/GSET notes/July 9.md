@@ -25,3 +25,5 @@
 - Cost Structure
 	- Operational $
 	- Economics of scale (More sales, production cost down)
+
+All these properties come together to construct the business model. This way, it provides a clear direction to which your business will take. It is a great initial organizer that gets the team moving with purpose.

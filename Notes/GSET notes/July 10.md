@@ -1,3 +1,25 @@
 Ryan Folland:
 - 3-1-3 sandwich
 	- Start with a story when pitching
+		- In the story, use all the abilities
+		- New ability: relatability
+- 10-20-30
+	- 10 never have more than 10 slides
+	- Never go over 20 minutes presenting
+	- 30 font
+- Slides
+	- Problem
+	- Our solution
+	- Business model
+	- Underlying magic/technology
+	- Marketing and sales
+	- Competition
+	- Team
+	- Projections and milestones
+	- Status and timeline
+		- When are our deadlines going to be met?
+		- When are resources going to be allocated
+	- Summary and call to action
+		- What do we want?
+		- Downloads?
+		- Investments
